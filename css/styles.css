@@ -2,10 +2,11 @@ div.container {
   margin: 0 auto;
   max-width: 1728px;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
 
 main {
+  position: relative;
   background: #032427;
   height: 100vh;
   padding: 50px 70px 0;
@@ -50,6 +51,64 @@ main {
   }
 }
 
+div.wrapper-text {
+  animation: text-fade 1.2s forwards;
+  /* opacity: 0; */
+
+  h1.title {
+    color: #fff;
+    text-align: center;
+    font-family: "Spectral", serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 1098px;
+    margin: 280px auto 0;
+
+    span {
+      color: #ff4d03;
+    }
+  }
+
+  h3.subTitle {
+    color: #fff;
+    text-align: center;
+    font-family: "Plus Jakarta Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 24px auto;
+  }
+
+  button {
+    margin: 0 auto;
+  }
+}
+
+div.wrapperImgs {
+  position: fixed;
+
+  img {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img#garrafa {
+    animation: garrafa-animation 1s forwards;
+  }
+
+  img#gargalo {
+    animation: gargalo-animation 1s forwards;
+  }
+
+  img#tampa {
+    z-index: 1;
+    animation: tampa-animation 1s forwards;
+  }
+}
+
 .default-button {
   border-radius: 42px;
   background: #ff4d03;
@@ -79,4 +138,36 @@ main {
 section.about {
   width: 100%;
   background: #2b575b;
+}
+
+@keyframes text-fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes tampa-animation {
+  100% {
+    top: 20%;
+  }
+}
+
+@keyframes garrafa-animation {
+  100% {
+    top: 80%;
+  }
+}
+
+@keyframes gargalo-animation {
+  100% {
+    top: 66%;
+  }
 }
